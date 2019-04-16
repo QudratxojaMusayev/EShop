@@ -8,9 +8,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background:;
   position: relative;
-  font-weight:400px;
+  font-weight: normal;
 }
 
 ul li {
@@ -733,7 +732,7 @@ h2.title:before{
   border-top: 0 none;
 }
 
-.category-products .badge {
+.category-products .panel-default .badge {
   background:none;
   border-radius: 10px;
   color: #696763;
@@ -1191,7 +1190,7 @@ h2.title {
 }
 
 #similar-product .carousel-inner .item{
-	padding-left:0px;
+	padding-left:0;
 }
 
 #similar-product .carousel-inner .item img {

@@ -6,6 +6,9 @@ $this->title = 'E-Shop';
 use app\components\MenuWidget;
 
 ?>
+<ul class="catalog">
+<?= MenuWidget::widget(['tpl' => 'menu']); ?>
+</ul>
 
 <section id="slider"><!--slider-->
     <div class="container">
@@ -78,7 +81,6 @@ use app\components\MenuWidget;
             <div class="col-sm-3">
                 <div class="left-sidebar">
                     <h2>Category</h2>
-                    <?= MenuWidget::widget(['tpl' => 'select']); ?>
 
                     <div class="panel-group category-products" id="accordian"><!--category-productsr-->
                         <div class="panel panel-default">
