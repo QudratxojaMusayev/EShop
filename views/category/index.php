@@ -2,8 +2,6 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'E-Shop';
-
 use app\components\MenuWidget;
 use yii\helpers\Html;
 

@@ -49,8 +49,9 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                '<controller>/<action>' => '<controller>/<action>',
-                '<category>/<id:\d+>' => '<category>/<view>'
+//                '<controller>/<action>' => '<controller>/<action>',
+                '<category>/<id:\d+>/page/<page:\d+>' => 'category/view',
+                '<category>/<id:\d+>' => 'category/view'
             ],
         ],
     ],
