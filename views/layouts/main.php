@@ -147,7 +147,11 @@ AppAsset::register($this);
                     </div>
                     <div class="col-sm-3">
                         <div class="search_box pull-right">
-                            <input type="text" placeholder="Search"/>
+                            <form method="get" action=" <?= Url::to(['category/search']); ?>">
+                                <label>
+                                    <input type="text" name="q" placeholder="Search"/>
+                                </label>
+                            </form>
                         </div>
                     </div>
                 </div>
