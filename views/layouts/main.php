@@ -5,6 +5,7 @@
 /* @var $content string */
 
 use app\widgets\Alert;
+use yii\bootstrap\Modal;
 use yii\helpers\Html;
 use app\assets\AppAsset;
 use yii\helpers\Url;
@@ -100,7 +101,7 @@ AppAsset::register($this);
                                 <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
                                 <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
                                 <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-                                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                                <li><a href="#" onclick="getCart()"><i class="fa fa-shopping-cart"></i> Cart</a></li>
                                 <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
                             </ul>
                         </div>
@@ -321,6 +322,18 @@ AppAsset::register($this);
 
     </footer><!--/Footer-->
 
+    <?php
+        Modal::begin([
+            'header' => '<h2>Cart</h2>',
+            'id' => 'cart',
+            'size' => 'modal-lg',
+            'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Continue shopping</button> 
+                                <button type="button" class="btn btn-success">Submit purchase</button>
+                                <button type="button" class="btn btn-danger" onclick="clearCart()">Clear Cart</button>'
+        ]);
+
+        Modal::end();
+    ?>
     <?php $this->endBody() ?>
     </body>
     </html>

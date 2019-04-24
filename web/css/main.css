@@ -2524,6 +2524,10 @@ h2.title {
   font-size: 25px;
 }
 
+.del-item {
+  cursor: pointer;
+}
+
 .contact-info .social-networks ul li a i{
   background: none;
 }
