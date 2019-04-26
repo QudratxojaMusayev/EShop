@@ -60,15 +60,21 @@ function clearCart() {
 
 $('.add-to-cart').on('click', function (event) {
     event.preventDefault();
-    var id = $(this).data('id');
+    let id = $(this).data('id'),
+        qty = $('#qty').val();
 
     $.ajax({
         url: '/cart/add',
-        data: {id: id},
+        data: {
+            id: id,
+            qty: qty,
+        },
         type: "GET",
         success: function (result) {
-            if (!result)
+            if (!result) {
                 alert("Error on addition!");
+                return false;
+            }
             showCart(result);
         },
         error: function () {

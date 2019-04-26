@@ -328,7 +328,7 @@ AppAsset::register($this);
             'id' => 'cart',
             'size' => 'modal-lg',
             'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Continue shopping</button> 
-                                <button type="button" class="btn btn-success">Submit purchase</button>
+                                <a href="'. Url::to(['cart/view']) .'" class="btn btn-success">Submit purchase</a>
                                 <button type="button" class="btn btn-danger" onclick="clearCart()">Clear Cart</button>'
         ]);
 
