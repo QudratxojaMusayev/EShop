@@ -17,8 +17,8 @@ if (!empty($session['cart'])) : ?>
             <tbody>
             <?php foreach ($session['cart'] as $id => $item) : ?>
                 <tr>
-                    <td><?= Html::img("@web/images/home/{$item['img']}", ['height' => 100]); ?></td>
-                    <td><?= $item['name']; ?></td>
+                    <td><a href="<?= Url::to(['product/view', 'id' => $id]) ?>"><?= Html::img("@web/images/home/{$item['img']}", ['height' => 100]); ?></a></td>
+                    <td><a href="<?= Url::to(['product/view', 'id' => $id]) ?>"><?= $item['name']; ?></a></td>
                     <td><?= $item['qty']; ?></td>
                     <td>$<?= $item['price']; ?></td>
                     <td>$<?= $item['sum']; ?></td>
